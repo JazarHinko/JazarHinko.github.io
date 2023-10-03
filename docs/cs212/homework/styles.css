@@ -11,14 +11,20 @@ body {
 
 header {
     font-family: endor;
-    font-size: 24px;
+    font-size: 32px;
 }
 
-h1, h2, h3 {
+h1{
     font-family: endor;
+    font-size: 26px;
+} 
+
+h2 {
+    font-family: endor;
+    font-size: 20px;
 }
 
-h2, h3 {
-    line-height: 1.5;
+p {
     font-family: endor;
+    font-size: 16px;
 }
