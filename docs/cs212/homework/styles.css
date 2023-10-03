@@ -1,29 +1,29 @@
 @font-face {
-    font-family: endor;
-    src: url(ENDOR___.ttf);
+    font-family: whimzee;
+    src: url(whimzee.ttf);
 }
 
 body {
     line-height: 1.5;
-    font-family: endor;
+    font-family: whimzee;
     margin: 5%;
 }
 
 header {
     line-height: 1.5;
-    font-family: endor;
+    font-family: whimzee;
     font-size: 24px;
     margin: 5%;
 }
 
 h1, h2, h3 {
     line-height: 1.5;
-    font-family: endor;
+    font-family: whimzee;
     margin: 5%;
 }
 
 h2, h3 {
     line-height: 1.5;
-    font-family: endor;
+    font-family: whimzee;
     margin: 5%;
 }
