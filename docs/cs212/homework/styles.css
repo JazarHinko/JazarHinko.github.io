@@ -12,12 +12,7 @@ body {
 header {
     line-height: 1.5;
     font-family: endor;
-    margin: 5%;
-}
-
-header p {
-    line-height: 1.5;
-    font-family: endor;
+    font-size: 24px;
     margin: 5%;
 }
 
