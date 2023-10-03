@@ -21,9 +21,11 @@
     <p>The steps to making a font family is pretty easy. First you need to make the main structure which is just "@font-face{}" outside any other structures within the file. From here, everything else
     will be done within the brackets. First is to name the font by adding "font-family:" then adding a name just like you'd change the font using CSS. Then you add the source with "src: url()" with your file
     location inside the parentheses. Additionally you <em>can</em> put an actual URL that points to a font file from something like Google Fonts inside it and it should add the font that way, but doing so makes
-    your own website dependant on the source, so should their URL change or their website go down then your special font won't work.</p>
+    your own website dependant on the source, so should their URL change or their website go down then your special font won't work. Now you can apply the font in your CSS file like any other, inside a structure,
+    such as the paragraph sections, you add "font-size:" and put your font's name and your font should be applied to any text in that section.</p>
     <h2>Step 3: Apply the font in HTML Files</h2>
-    <p>Paragraph</p>
+    <p>Finally, all you have to do to get you font into an HTML file is to link your styles CSS file in the head section of your HTML file, and then it should apply your font to any sections you'd previously set
+    it to apply to.</p>
   </main>
 </body>
 </html>
