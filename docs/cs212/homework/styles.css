@@ -9,22 +9,14 @@ body {
     margin: 5%;
 }
 
-header {
-    font-family: endor;
-    font-size: 32px;
-}
-
-h1{
-    font-family: endor;
-    font-size: 26px;
+h1 {
+    font-size: 40px;
 } 
 
 h2 {
-    font-family: endor;
-    font-size: 20px;
+    font-size: 28px;
 }
 
 p {
-    font-family: endor;
-    font-size: 16px;
+    font-size: 20px;
 }
