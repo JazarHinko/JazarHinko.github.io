@@ -12,7 +12,7 @@ body {
 header {
     line-height: 1.5;
     font-family: endor;
-    margin: 5%;
+    margin: 20%;
 }
 
 header p {
@@ -24,11 +24,11 @@ header p {
 h1, h2, h3 {
     line-height: 1.5;
     font-family: endor;
-    margin: 5%;
+    margin: 10%;
 }
 
 h2, h3 {
     line-height: 1.5;
     font-family: endor;
-    margin: 5%;
+    margin: 25%;
 }
