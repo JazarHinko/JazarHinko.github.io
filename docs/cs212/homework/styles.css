@@ -6,8 +6,9 @@
 body {
     line-height: 1.5;
     font-family: endor;
-    font-size: 40px;
-    margin: 5%;
+    font-size: 48px;
+    margin: 3%;
+    background-color: coral;
 }
 
 h1 {
