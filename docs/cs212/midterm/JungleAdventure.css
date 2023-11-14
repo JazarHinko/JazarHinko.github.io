@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-image: url(jungle.jpg);
+    background-size:cover;
+    color:beige;
+}
+.content {
+    width: 65%;
+}
+.room-name {
+    color: beige;
+}
+
+.action-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.column {
+    flex-direction: column;
+    background-image: url('woodTexture.jpg');
+    background-size:cover;
+    border: solid 4px;
+    border-radius: 8px;
+    border-color: black;
+    text-align: center;
+
+}
+
+button {
+    background-color: #ffff6f8f;
+    padding: 15px;
+    align-self: center;
+    text-align: center;
+    flex-grow: 1;
+    color: black;
+    
+}
