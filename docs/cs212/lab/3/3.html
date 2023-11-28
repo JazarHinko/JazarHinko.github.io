@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Homework 3</title>
+  <link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Steps on How to Add a Font in CSS</h1>
+    </header>
+    <h2>Step 1: Find and Aquire a Font you like</h2>
+    <p>Your first step is to find a font you like, it can be any kind of font, goofy, serious, or even something inbetween. Then you need to find somewhere you can downlaid it from and the download it. 
+    From the download you'll need a .ttf file. If your download doesn't have one you'll either need to look up if the file type is usable with CSS, find a download that has a .ttf file, or try and 
+    convert the file type to .ttf. Once you have a .ttf file, you're going to have to upload it wherever your website files are.</p>
+    <h2>Step 2: Add the Font to your styles.css File</h2>
+    <p>Once you've got your .ttf files with your webstie files you're going to have to make a "styles.css" file if you don't already have one. If you don't have one, I'd recommend finding a simple template
+    online to get the basic structure down. Then, when you've got a "styles.css" file ready, you are going to make a font family.</p>
+    <p>The steps to making a font family is pretty easy. First you need to make the main structure which is just "@font-face{}" outside any other structures within the file. From here, everything else
+    will be done within the brackets. First is to name the font by adding "font-family:" then adding a name just like you'd change the font using CSS. Then you add the source with "src: url()" with your file
+    location inside the parentheses. Additionally you <em>can</em> put an actual URL that points to a font file from something like Google Fonts inside it and it should add the font that way, but doing so makes
+    your own website dependant on the source, so should their URL change or their website go down then your special font won't work. Now you can apply the font in your CSS file like any other, inside a structure,
+    such as the paragraph sections, you add "font-size:" and put your font's name and your font should be applied to any text in that section.</p>
+    <h2>Step 3: Apply the font in HTML Files</h2>
+    <p>Finally, all you have to do to get you font into an HTML file is to link your styles CSS file in the head section of your HTML file, and then it should apply your font to any sections you'd previously set
+    it to apply to.</p>
+  </main>
+</body>
+</html>
