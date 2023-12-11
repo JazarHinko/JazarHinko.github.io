@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Play the Lights Out game" />
+		<title>Lights Out</title>
+		
+		<style>
+		</style>
+		<script type="text/javascript">
+			var width = 5;
+			var height = 5;
+			var puzzle = "                         ";
+			var curpuz = puzzle;
+			function initToggleState(ind) 
+			{
+				var ch;
+				if (puzzle.charAt(ind) == ' ') 
+				{
+					ch = '#';
+				} 
+				else 
+				{
+					ch = ' ';
+				}
+				puzzle = puzzle.substr(0, ind) + ch + puzzle.substr(ind+1);
+			}
+			
+			function randomizeStart()
+			{
+				for (let i = 0; i < width * height; i++)
+				{
+					let rand = Math.floor(Math.random()*25);
+					initToggleState(rand);
+					if (rand >= width) 
+					{
+						initToggleState(rand-width);
+					}
+					if (rand % width >= 1) 
+					{
+						initToggleState(rand-1);
+					}
+					if (rand % width <= width-2) 
+					{
+						initToggleState(rand+1);
+					}
+					if (rand + width < height * width) 
+					{
+						initToggleState(rand + width);
+					}
+				}
+				curpuz = puzzle;
+			}
+			randomizeStart();
+		</script>
+		<script type="text/javascript" src="LightsOut.js"></script>
+	</head>
+	
+	<body onload="initLightsOutGrid()">
+		<center>
+			<h1>LightsOut</h1>
+			<div id="container">
+				<table>
+					<tr>
+						<td style="width: 20px;">&nbsp;</td>
+						<td colspan="3" id="contain"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td class="tools">
+							<input type="button" value="New Game" onclick="window.location='index.html'" />
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="explanation">
+				<h2>Explanation</h2>
+				<p>
+					Lights Out is a simple little puzzle game. Clicking on a block will toggle that
+					block and all of it's direct neighbors. The ultimate goal of Lights Out is to black
+					out all of the block, turning off the lights in them. The less clicks required, the better.
+				</p>
+			</div>
+		</center>
+	</body>
+</html>
