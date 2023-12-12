@@ -1,42 +1,40 @@
 var req;
-var curCell = -1;
-var prevClick = -1;
-//var curMoves = 0;
-var celltds = new Array(width*height);
-var backColors = new Array(width*height);
-var moveArr = new Array();
+var currentCell = -1;
+var previousClick = -1;
+var tableDataCells = new Array(width*height);
+var cellColors = new Array(width*height);
 
 function createTd(index) 
 {
-	celltds[index] = document.createElement('td');
-	celltds[index].id = "c" + index;
-	celltds[index].style.fontSize = "30pt";
-	celltds[index].style.height = "2em";
-	celltds[index].style.width = "2em";
-	celltds[index].style.border = "3px solid black";
-	celltds[index].style.textAlign = "center";
-	celltds[index].onmouseover = mouseOver;
-	celltds[index].onmouseout = mouseOut;
-	celltds[index].onmousedown = mouseClick;
-	celltds[index].onselectstart = function()
+	tableDataCells[index] = document.createElement('td');
+	tableDataCells[index].id = "c" + index;
+	tableDataCells[index].style.fontSize = "30pt";
+	tableDataCells[index].style.height = "2em";
+	tableDataCells[index].style.width = "2em";
+	tableDataCells[index].style.border = "3px solid black";
+	tableDataCells[index].style.textAlign = "center";
+	tableDataCells[index].onmouseover = mouseOver;
+	tableDataCells[index].onmouseout = mouseOut;
+	tableDataCells[index].onmousedown = mouseClick;
+	tableDataCells[index].onselectstart = function()
 	{
 		return false
 	};
-	celltds[index].onmouseup = function()
+	tableDataCells[index].onmouseup = function()
 	{
 		return false
 	};
-	celltds[index].innerHTML = "&nbsp;";
+	tableDataCells[index].innerHTML = "&nbsp;";
 
 	if (puzzle.charAt(index) == '#') 
 	{
-		celltds[index].style.backgroundColor = "#333";
-		backColors[index] = "#333";
+		tableDataCells[index].style.backgroundColor = "#333";
+		cellColors[index] = "#333";
 	} 
 	else 
 	{
-		celltds[index].style.backgroundColor = "#EEE";
-		backColors[index] = "#EEE";
+		tableDataCells[index].style.backgroundColor = "#EEE";
+		cellColors[index] = "#EEE";
 	}
 }
 
@@ -53,7 +51,7 @@ function initLightsOutGrid()
 		for (var j = 0; j < width; j++) 
 		{
 			createTd(i*width+j);
-			newtr.appendChild(celltds[i*width+j]);
+			newtr.appendChild(tableDataCells[i*width+j]);
 		}
 		tbody.appendChild(newtr);
 	}
@@ -76,14 +74,14 @@ function getEventId(e)
 function mouseOver(e) 
 {
 	var index = getEventId(e);
-	curCell = index;
+	currentCell = index;
 }
 
 
 function mouseOut(e) 
 {
 	var index = getEventId(e);
-	curCell = -1;
+	currentCell = -1;
 }
 
 function toggleState(index) 
@@ -99,15 +97,15 @@ function toggleState(index)
 	}
 	if (curpuz.charAt(index) == ' ') 
 	{
-		backColors[index] = "#333";
+		cellColors[index] = "#333";
 		ch = '#';
 	} 
 	else 
 	{
-		backColors[index] = "#EEE";
+		cellColors[index] = "#EEE";
 		ch = ' ';
 	}
-	celltds[index].style.backgroundColor = backColors[index];
+	tableDataCells[index].style.backgroundColor = cellColors[index];
 	curpuz = curpuz.substr(0, index) + ch + curpuz.substr(index+1);
 
 	return curpuz.indexOf(' ') == -1;
@@ -117,17 +115,17 @@ function toggleState(index)
 function mouseClick(e)
 {
 	var index = getEventId(e);
-	if (curCell != index) 
+	if (currentCell != index) 
 	{
 		return true;
 	}
-	if (index == prevClick) 
+	if (index == previousClick) 
 	{
-		prevClick = -1;
+		previousClick = -1;
 	} 
 	else 
 	{
-		prevClick = index;
+		previousClick = index;
 	}
 	
 	if (index >= width) 
