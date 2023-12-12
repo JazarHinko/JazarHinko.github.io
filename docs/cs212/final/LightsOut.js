@@ -144,7 +144,7 @@ function mouseClick(e)
 	}
 	if (toggleState(index)) 
 	{
-		alert("Congratulations! You have won!");
+		window.alert("Congratulations! You have won!");
 	}
 	return false;
 }
