@@ -60,12 +60,12 @@ function initGrid()
 
 function getEventId(e) 
 {
-	var target;
+	var tgt;
 	if (!e) var e = window.event;
-	if (e.target) target = e.target;
-	else if (e.srcElement) target = e.srcElement;
-	if (target.nodeType == 3) target = target.parentNode;
-	return parseInt(target.id.substring(1));
+	if (e.target) tgt = e.target;
+	else if (e.srcElement) tgt = e.srcElement;
+	if (tgt.nodeType == 3) tgt = tgt.parentNode;
+	return parseInt(tgt.id.substring(1));
 }
 
 
