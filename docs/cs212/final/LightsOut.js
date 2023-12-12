@@ -25,7 +25,6 @@ function createTd(index)
 		return false
 	};
 	tableDataCells[index].innerHTML = "&nbsp;";
-
 	if (puzzle.charAt(index) == '#') 
 	{
 		tableDataCells[index].style.backgroundColor = "#333";
@@ -39,11 +38,11 @@ function createTd(index)
 }
 
 // create the table with all the cells
-function initLightsOutGrid() 
+function initGrid() 
 {
-	var mydiv = document.getElementById('contain');
-	var tbl = document.createElement('table');
-	var tbody = document.createElement('tbody');
+	var div = document.getElementById('contain');
+	var table = document.createElement('table');
+	var tableBody = document.createElement('tableBody');
 
 	for (var i = 0; i < height; i++) 
 	{
@@ -53,10 +52,10 @@ function initLightsOutGrid()
 			createTd(i*width+j);
 			newtr.appendChild(tableDataCells[i*width+j]);
 		}
-		tbody.appendChild(newtr);
+		tableBody.appendChild(newtr);
 	}
-	tbl.appendChild(tbody);
-	mydiv.appendChild(tbl);
+	table.appendChild(tableBody);
+	div.appendChild(table);
 }
 
 
