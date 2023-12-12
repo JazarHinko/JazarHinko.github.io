@@ -51,7 +51,7 @@ function initGrid()
 			createTd(i*width+j);
 			newTableRow.appendChild(tableDataCells[i*width+j]);
 		}
-		tableBody.appendChild(newtr);
+		tableBody.appendChild(newTableRow);
 	}
 	table.appendChild(tableBody);
 	div.appendChild(table);
