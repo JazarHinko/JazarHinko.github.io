@@ -73,10 +73,24 @@
 					</tr>
 				</table>
 			</div>
-			<div id="explanation">
-				<h2>Explanation</h2>
+			<div>
+				<h2>How to Play</h2>
 				<p>
-					Lights Out is a simple puzzle game. Clicking on a block will toggle that block and all of it's direct neighbors. The ultimate goal of Lights Out is to black out all of the block, turning off the lights in them. The less clicks required, the better.
+					Lights Out is a simple puzzle game. Clicking on a block will toggle that block and all of it's direct neighbors. The ultimate goal of Lights Out is to black out 
+					all of the block, turning off the lights in them. The less clicks required, the better.
+				</p>
+				<h2>Addendum</h2>
+				<p>
+					To start with this project I spent some time playing the Lights Out game and just thinking about how the code would work for flipping the on and off states. 
+					Then I decided to get the initial webpage up just so I could have my own table to look at. It took a little bit for me to get an actual table set up with a 
+					play again button right below it, but once I had that set up I began work on randomizing the initial board. I started with just a purely random (but usually 
+					unsolvable board). From there I came to understand the hint about simulating a click to randomize, then I went to create the functions needed to flip the cells 
+					when clicked. I took the main code for my randomizer and used that to flip the cells, essentially I used a 25 character long string that holds either ‘#’s for 
+					off, since it’s the character that takes the most space of a square, and ‘ ‘ for on, since it’s just white space. The code would then read each character in the 
+					string and set the cell’s background as needed to represent on and off. To finish the clicks, I simply had to make it change the adjacent squares by adding and 
+					subtracting from the clicked on index, first making sure that there should actually be a square there so it doesn’t try to change out of bounds objects. Once that 
+					was done, I just remade that function removing the unnecessary checks and turned it into the random code, so it’d generate a random index from 0-24, and flip that 
+					cell and the adjacent ones.
 				</p>
 			</div>
 		</center>
