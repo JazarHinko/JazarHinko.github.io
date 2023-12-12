@@ -40,7 +40,7 @@ function createTd(index)
 // create the table with all the cells
 function initGrid() 
 {
-	var div = document.getElementById('contain');
+	var div = document.getElementById('container');
 	var table = document.createElement('table');
 	var tableBody = document.createElement('tableBody');
 
